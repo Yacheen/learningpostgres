@@ -1,7 +1,7 @@
 import express, { Request, Response, Application, NextFunction } from "express";
+import cors from "cors";
+import { pool } from "./db";
 const app: express.Application = express();
-const cors = require("cors");
-const pool = require("./db");
 
 //middleware
 app.use(cors());
