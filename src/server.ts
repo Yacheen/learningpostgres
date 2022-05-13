@@ -9,6 +9,7 @@ app.use(express.json());
 
 app.get("/", (req: Request, res: Response, next: express.NextFunction) => {
 	console.log("hello world");
+	console.log("your elastic beanstalk instance is working smiley face");
 });
 
 //routes
