@@ -80,7 +80,7 @@ app.delete("/todos/:id", async (req: Request, res: Response) => {
 	}
 });
 
-const port = process.env.port || 3000;
-app.listen(port, () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
 	console.log("listening on port 5000");
 });

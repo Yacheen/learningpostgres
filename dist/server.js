@@ -78,7 +78,7 @@ app.delete("/todos/:id", (req, res) => __awaiter(void 0, void 0, void 0, functio
         console.error(err);
     }
 }));
-const port = process.env.port || 3000;
-app.listen(port, () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
     console.log("listening on port 5000");
 });
