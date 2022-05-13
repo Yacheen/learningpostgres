@@ -20,8 +20,7 @@ const pool = require("./db");
 app.use(cors());
 app.use(express_1.default.json());
 app.get("/", (req, res, next) => {
-    console.log("hello world");
-    console.log("your elastic beanstalk instance is working smiley face");
+    res.send("hello wowrd!");
 });
 //routes
 //create a todo
