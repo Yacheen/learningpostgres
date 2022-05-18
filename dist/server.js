@@ -31,7 +31,7 @@ app.post("/todos", (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         res.json(newTodo.rows[0]);
     }
     catch (err) {
-        console.error(err.message);
+        console.error(err);
     }
 }));
 //get all todos
@@ -79,6 +79,5 @@ app.delete("/todos/:id", (req, res) => __awaiter(void 0, void 0, void 0, functio
     }
 }));
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log("listening on port 5000");
-});
+app.listen(PORT);
+exports.default = app;

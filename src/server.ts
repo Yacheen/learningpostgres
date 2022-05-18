@@ -1,7 +1,7 @@
 import express, { Request, Response, Application, NextFunction } from "express";
 import cors from "cors";
 import { pool } from "./db";
-const app: express.Application = express();
+const app: Application = express();
 
 //middleware
 app.use(cors());
@@ -22,7 +22,7 @@ app.post("/todos", async (req: Request, res: Response) => {
 		);
 		res.json(newTodo.rows[0]);
 	} catch (err: any) {
-		console.error(err.message);
+		console.error(err);
 	}
 });
 
@@ -80,7 +80,6 @@ app.delete("/todos/:id", async (req: Request, res: Response) => {
 	}
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-	console.log("listening on port 5000");
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
+export default app;
